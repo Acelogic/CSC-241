@@ -1,4 +1,4 @@
-package ObjectOrientation.BoxDemo;
+package Coursework.ObjectOrientation.BoxDemo;
 
 public class Box {
     // Instance Variables

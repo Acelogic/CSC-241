@@ -1,4 +1,4 @@
-package AbstractClass;
+package Coursework.AbstractClass;
 
 public class StaffAssistant extends Employee {
 

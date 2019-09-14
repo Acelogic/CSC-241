@@ -1,4 +1,4 @@
-package AbstractClass;
+package Coursework.AbstractClass;
 
 public abstract class Employee {
 
