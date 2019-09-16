@@ -40,7 +40,7 @@ public class Package {
     }
 
     public void addProduct(Product p) {
-       products.add(p);
+        products.add(p);
     }
 
     public double getWeight() {
@@ -56,14 +56,14 @@ public class Package {
     }
 
     public LocalDateTime getDeliveryTime() {
-        if(isDelivered) {
-            System.out.println("Delivered");
-            return deliveryTime;
-        }
-        else{
-            System.out.println("Attempted Delivery");
-            return  timeAttempted;
-        }
+        System.out.println("Delivered");
+        return deliveryTime;
+    }
+
+    public LocalDateTime getDeliveryAttempt() {
+        System.out.println("Attempted Delivery");
+        return timeAttempted;
+
     }
 
     public void markDelivered() {
@@ -73,7 +73,7 @@ public class Package {
 
     public void markUndelivered() {
         isDelivered = false;
-        timeAttempted= LocalDateTime.now();
+        timeAttempted = LocalDateTime.now();
 
     }
 
