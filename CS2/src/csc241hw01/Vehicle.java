@@ -13,12 +13,7 @@ public class Vehicle {
         this.type = type;
         this.ID = ID;
         this.packages = new ArrayList<>(Arrays.asList(packages));
-
-
-
     }
-
-
     public String getType(){
 
         return type;

@@ -56,12 +56,12 @@ public class Package {
     }
 
     public LocalDateTime getDeliveryTime() {
-        System.out.println("Delivered");
+        //System.out.println("Delivered");
         return deliveryTime;
     }
 
     public LocalDateTime getDeliveryAttempt() {
-        System.out.println("Attempted Delivery");
+        //System.out.println("Attempted Delivery");
         return timeAttempted;
 
     }
