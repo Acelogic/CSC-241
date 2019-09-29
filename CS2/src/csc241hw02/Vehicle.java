@@ -1,12 +1,7 @@
 package csc241hw02;
 
-import csc241hw01.Package;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public abstract class Vehicle {
 

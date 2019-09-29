@@ -1,13 +1,9 @@
 package csc241hw02;
 
-import csc241hw01.Customer;
-import csc241hw01.Product;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Package {
-
     private String trackingNum;
     private String type;
     private double weight;
@@ -27,7 +23,6 @@ public class Package {
         deliveryTime = null;
 
     }
-
 
     public void addProduct(Product p) {
         products.add(p);

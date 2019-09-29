@@ -1,6 +1,5 @@
 package csc241hw02;
 
-import csc241hw01.Customer;
 
 public class Taxable extends Product implements TaxableNY{
 
