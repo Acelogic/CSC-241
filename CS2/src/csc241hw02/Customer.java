@@ -1,4 +1,4 @@
-package csc241hw01;
+package csc241hw02;
 
 public class Customer {
 

@@ -1,33 +1,37 @@
-package csc241hw01;
+package csc241hw02;
+
+import csc241hw01.Package;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
-public class Vehicle {
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public abstract class Vehicle {
 
     private String type;
     private ArrayList<Package> packages;
     private String ID;
 
-    public Vehicle(String type,  String ID){
+    public Vehicle(String type, String ID) {
         this.type = type;
         this.ID = ID;
         this.packages = new ArrayList<Package>();
     }
-    public String getType(){
 
-        return type;
-    }
+    public abstract String getType();
 
-    public Package[] getPackages(){
+    public Package[] getPackages() {
         Package[] packageArr = packages.toArray(new Package[packages.size()]);
         return packageArr;
     }
 
-    public String getID(){
+    public String getID() {
         return ID;
     }
 
-    public void addPackage(Package p){
+    public void addPackage(Package p) {
         packages.add(p);
 
     }

@@ -1,6 +1,8 @@
-package csc241hw01;
+package csc241hw02;
 
-import java.sql.Time;
+import csc241hw01.Customer;
+import csc241hw01.Product;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -26,24 +28,9 @@ public class Package {
 
     }
 
-    public String getTrackingNumber() {
-        return trackingNum;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public Product[] getProducts() {
-        return products.toArray(new Product[products.size()]);
-    }
 
     public void addProduct(Product p) {
         products.add(p);
-    }
-
-    public double getWeight() {
-        return weight;
     }
 
     public void setWeight(double w) {
@@ -62,6 +49,30 @@ public class Package {
     public LocalDateTime getDeliveryAttempt() {
         return timeAttempted;
 
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public String getTrackingNumber() {
+        return trackingNum;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public double getTotal() {
+        double netPrice = 0;
+        for (Product p : getProducts()) {
+            netPrice = netPrice + (p.getQuantity() * p.getUnitPrice());
+        }
+        return netPrice;
+    }
+
+    public Product[] getProducts() {
+        return products.toArray(new Product[products.size()]);
     }
 
     public void markDelivered() {
