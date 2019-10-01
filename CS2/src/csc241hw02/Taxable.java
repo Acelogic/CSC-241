@@ -11,7 +11,8 @@ public class Taxable extends Product implements TaxableNY{
 
     @Override
     public double getPrice() {
-        return getQuantity() * getUnitPrice() * taxRateNY;
+        double price = getQuantity() * getUnitPrice();
+        return getSalesTax(price) + price;
     }
     @Override
     public double getSalesTax(double price) {

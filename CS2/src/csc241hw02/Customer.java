@@ -7,6 +7,7 @@ public class Customer {
     private String address;
     private String zipCode;
     private String accountNumber;
+
     public Customer(String lastName, String firstName, String address, String zipCode, String accountNumber){
         this.lastName = lastName;
         this.firstName = firstName;

@@ -61,7 +61,7 @@ public class Package {
     public double getTotal() {
         double netPrice = 0;
         for (Product p : getProducts()) {
-            netPrice = netPrice + (p.getQuantity() * p.getUnitPrice());
+            netPrice += p.getPrice();
         }
         return netPrice;
     }
