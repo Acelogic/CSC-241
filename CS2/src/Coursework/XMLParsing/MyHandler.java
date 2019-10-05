@@ -15,8 +15,7 @@ import org.xml.sax.helpers.DefaultHandler;
  */
 public class MyHandler extends DefaultHandler {
     
-    public void startElement(String uri, String localName, String qName, Attributes attributes)
-            throws SAXException {
+    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         System.out.println("URI:" + uri);
         System.out.println("LOCALNAME:" + localName);
         System.out.println("QNAME:" + qName);
