@@ -29,7 +29,7 @@ public class Main {
                 // From each one
                 for(Package pkg : vehicle.getPackages()) {
                     Customer customer = pkg.getCustomer();
-                    System.out.println("\t\t\t" + customer.getLastName() + ", " + customer.getFirstName() + "at " + customer.getStreetAddress() +", " + customer.getZipCode());
+                    System.out.println("\t\t\t" + customer.getLastName() + ", " + customer.getFirstName() + " at " + customer.getStreetAddress() +", " + customer.getZipCode());
 
                 }
                 // Obtaining the sum of the packages from each vehicle
