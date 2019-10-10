@@ -8,9 +8,11 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * @author mcruz
+ */
+
 public class Handler extends DefaultHandler {
-
-
     private ArrayList<Product> productList = new ArrayList<>();
     private ArrayList<Vehicle> vehicleList = new ArrayList<>();
     private Vehicle vehicle;
