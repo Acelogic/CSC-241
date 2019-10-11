@@ -4,10 +4,12 @@ import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+
 import java.io.File;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 ;
+
 /**
  * @author mcruz
  */
@@ -22,23 +24,21 @@ public class Main {
             File input = null;
 
 
-            System.out.println("Choose Option: \n 1) Type in xml file name manually \n 2) Browse the file system for your xml file");
+            System.out.println("Enter the File Name (Case Sensitive & Include Extension)");
+            System.out.println("( If you want to browse the filesystem for your own .xml file type in f )");
             try {
-                switch (sc.nextInt()) {
-                    case 1:
-                        System.out.println("Enter the File Name (Case Sensitive & Include Extension)");
-                        input = new File(sc.next());
-                        break;
-                    case 2:
-                        JFileChooser chooser = new JFileChooser();
-                        chooser.setFileFilter(new FileNameExtensionFilter("XML", "xml"));
-                        int returnVal = chooser.showOpenDialog(chooser);
-                        String path = null;
-                        if (returnVal == JFileChooser.APPROVE_OPTION) {
-                            path = chooser.getSelectedFile().getPath();
-                        }
-                        input = new File(path);
-                        break;
+                String usrString = sc.next();
+                if (usrString.equals("f")) {
+                    JFileChooser chooser = new JFileChooser();
+                    chooser.setFileFilter(new FileNameExtensionFilter("XML", "xml"));
+                    int returnVal = chooser.showOpenDialog(chooser);
+                    String path = null;
+                    if (returnVal == JFileChooser.APPROVE_OPTION) {
+                        path = chooser.getSelectedFile().getPath();
+                    }
+                    input = new File(path);
+                } else {
+                    input = new File(usrString);
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Not a valid input run and try again");
@@ -62,14 +62,16 @@ public class Main {
 
                 }
                 // Obtaining the sum of the package costs from each vehicle
+
                 for (Package pkg : vehicle.getPackages()) {
                     total = total + pkg.getTotal();
 
                 }
                 System.out.println("\t Total");
-                System.out.println("\t\t " + total);
+                System.out.println("\t\t " + String.format("%.2f", total));
                 // Reset the Total for the next Vehicle
                 total = 0;
+
             }
             System.out.println("---=== End of Report ===---");
         } catch (Exception e) {

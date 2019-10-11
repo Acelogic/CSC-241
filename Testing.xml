@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<deliveries>
+    <van id="VID-12345">
+        <package>
+            <product taxable="true" productName="Headphones" isbn="123456" unitPrice="10.00" quantity="12"/>
+            <product taxable="false" productName="Milk" isbn="234567" unitPrice="2.00" quantity="2"/>
+            <customer lastName="Adams" firstName="Maurice" streetAddress="123 4th St" zipCode="13126" accountNumber="ACCT-54321"/>
+        </package>
+        <package>
+            <customer lastName="Cruz" firstName="Miguel" streetAddress="127.0.0.1" zipCode="localhost" accountNumber="lolno"/>
+            <product taxable="true" productName="Airpods" isbn="123456" unitPrice="145.99" quantity="1"/>
+            <product taxable="false" productName="IPhone11" isbn="234567" unitPrice="1100.00" quantity="2"/>
+        </package>
+        <package>
+            <product taxable="true" productName="Snickers" isbn="345678" unitPrice="1.00" quantity="1"/>
+            <customer lastName="Baxter" firstName="Robert" streetAddress="234 5th St" zipCode="13126" accountNumber="ACCT-65432"/>
+            <product taxable="false" productName="Milk" isbn="234567" unitPrice="2.00" quantity="1"/>
+        </package>
+    </van>
+    <van id="Van 2">
+        <package>
+            <product taxable="true" productName="Headphones" isbn="123456" unitPrice="10.00" quantity="12"/>
+            <product taxable="false" productName="Milk" isbn="234567" unitPrice="2.00" quantity="2"/>
+            <customer lastName="Adams" firstName="Maurice" streetAddress="123 4th St" zipCode="13126" accountNumber="ACCT-54321"/>
+        </package>
+        <package>
+            <customer lastName="Cruz" firstName="Miguel" streetAddress="127.0.0.1" zipCode="localhost" accountNumber="lolno"/>
+            <product taxable="true" productName="Airpods" isbn="123456" unitPrice="145.99" quantity="1"/>
+            <product taxable="false" productName="IPhone11" isbn="234567" unitPrice="1100.00" quantity="2"/>
+        </package>
+        <package>
+            <product taxable="true" productName="Snickers" isbn="345678" unitPrice="1.00" quantity="1"/>
+            <customer lastName="Baxter" firstName="Robert" streetAddress="234 5th St" zipCode="13126" accountNumber="ACCT-65432"/>
+            <product taxable="false" productName="Milk" isbn="234567" unitPrice="2.00" quantity="1"/>
+        </package>
+    </van>
+</deliveries>

@@ -83,15 +83,6 @@ public class PlayList implements Iterable<Song>, Iterator<Song> {
         return this;
     }
 
-
-
-
-    
-    
-    
-    
-    
-        
     @Override
     public Song next() {
         if (!this.hasNext()) {
