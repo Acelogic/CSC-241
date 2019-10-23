@@ -1,8 +1,6 @@
-package Coursework.GCDDemo;
+package Coursework.Recursion;
 
-import java.util.spi.CalendarDataProvider;
-
-public class Main {
+public class GCDDemo {
 
     private static int gcd(int p, int q) {
         System.out.println("DEBUG: P: " + p + " Q:" + q);
