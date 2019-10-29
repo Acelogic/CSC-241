@@ -31,7 +31,16 @@ public class BinarySearchTree {
         }
         return "";
     }
-    
+
+        // PRE
+        // V-L-R
+
+        // IN ORDER
+        // L-V-R
+
+        // POST ORDER
+        // L-R-V
+
 //    // Check if a value is contained in the tree
 //    public boolean contains(int v) {
 //        // check for an empty tree

@@ -1,4 +1,4 @@
-package Examples.Articles;
+package Coursework.Examples.Articles;
 
 
 import java.util.ArrayList;

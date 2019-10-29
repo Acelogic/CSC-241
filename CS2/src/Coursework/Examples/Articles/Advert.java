@@ -1,4 +1,4 @@
-package Examples.Articles;
+package Coursework.Examples.Articles;
 
 public class Advert {
    private int yearReleased;

@@ -5,6 +5,8 @@
  */
 package Coursework.BinaryTree.BSTDemo;
 
+import java.util.Random;
+
 /**
  *
  * @author jim
@@ -20,13 +22,13 @@ public class Main {
         // Create an empty tree
         BinarySearchTree bst1 = new BinarySearchTree();
         
-        // Insert some values
-        bst1.insert(20);
-        bst1.insert(10);
-        bst1.insert(30);
-        bst1.insert(25);
-        bst1.insert(6);
-        bst1.insert(15);
+        // Insert random some values
+        bst1.insert((int) (Math.random()* 100));
+        bst1.insert((int) (Math.random()* 100));
+        bst1.insert((int) (Math.random()* 100));
+        bst1.insert((int) (Math.random()* 100));
+        bst1.insert((int) (Math.random()* 100));
+        bst1.insert((int) (Math.random()* 100));
         
         // In Order traversal
         System.out.println("IN ORDER: " + bst1.inOrder());
