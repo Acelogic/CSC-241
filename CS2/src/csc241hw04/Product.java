@@ -1,6 +1,6 @@
 package csc241hw04;
 
-public abstract class Product implements Comparable{
+public abstract class Product implements Comparable {
 
     private String productName;
     private String ISBN;
@@ -8,10 +8,10 @@ public abstract class Product implements Comparable{
     private int productQty;
 
     public Product(String productName, String ISBN, double unitPrice, int productQuantity) {
-    this.productName = productName;
-    this.ISBN = ISBN;
-    this.unitPrice = unitPrice;
-    this.productQty = productQuantity;
+        this.productName = productName;
+        this.ISBN = ISBN;
+        this.unitPrice = unitPrice;
+        this.productQty = productQuantity;
     }
 
     public String getProductName() {
@@ -24,12 +24,12 @@ public abstract class Product implements Comparable{
         return ISBN;
     }
 
-    public double getUnitPrice(){
+    public double getUnitPrice() {
 
         return unitPrice;
     }
 
-    public int getQuantity(){
+    public int getQuantity() {
 
         return productQty;
     }
@@ -37,15 +37,18 @@ public abstract class Product implements Comparable{
     public abstract double getPrice();
 
 
-    // TODO: Work on this
+
     @Override
     public String toString() {
-        return null;
+        return "[" + productName + ":" + getISBN() + "]";
     }
 
-    // TODO: Work on this
+
     @Override
     public int compareTo(Object o) {
-        return 0;
+        Product other = (Product) o;
+        return (this.productName.compareTo(other.productName) != 0)
+                ? this.productName.compareTo(other.productName)
+                : this.ISBN.compareTo(other.ISBN);
     }
 }
