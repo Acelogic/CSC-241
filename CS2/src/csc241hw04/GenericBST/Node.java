@@ -1,30 +1,27 @@
-package csc241hw04;
-
+package csc241hw04.GenericBST;
 
 import java.util.Random;
 
-// TODO: Work on this
-public class ProductNode {
-    private ProductNode left;
-    private ProductNode right;
-    public Product value;
+public class Node<T extends Comparable<T>> {
+    private Node left;
+    private Node<T> right;
+    private T value;
 
-
-
-    public ProductNode(Product product) {
-        this.value = product;
+    public Node(T element) {
+        this.value = element;
         left = null;
         right = null;
 
+
     }
 
-    public void insert(Product product) {
+    public void insert(T element) {
         // if value precedes node product (Negative Case)
-        if (product.compareTo(this.value) <= 0) {
-            // goes left 
+        if (element.compareTo(this.value) <= 0) {
+            // goes left
             if (left == null) {
                 // No left child -- create new node
-                left = new ProductNode(product);
+                left = new Node<>(element);
                 System.out.println("(NODE) Left Empty: Going left");
                 System.out.println("(NODE) Insert Successful");
                 System.out.println("==========================");
@@ -34,15 +31,15 @@ public class ProductNode {
 
                 System.out.println("(NODE) " + this.left.value + " is in the way (L)");
                 System.out.println("(NODE) Re-running insert() On it ");
-                left.insert(product);
+                left.insert(element);
 
             }
             // if value is ahead of node product (Positive Case)
         } else {
-            // goes right 
+            // goes right
             if (right == null) {
                 // No right child -- create new node
-                right = new ProductNode(product);
+                right = new Node<>(element);
                 System.out.println("(NODE) Right Empty: Going Right");
                 System.out.println("(NODE) Insert Successful");
                 System.out.println("==========================");
@@ -53,26 +50,27 @@ public class ProductNode {
 
                 System.out.println("(NODE) " + this.right.value + " is in the way (R)");
                 System.out.println("(NODE) Re-running insert() On it ");
-                right.insert(product);
+                right.insert(element);
 
             }
         }
 
     }
 
-    public boolean contains(Product product) {
 
-        if (product == value) {
+    public boolean contains(T element) {
+
+        if (element == value) {
             // Value found in the current node
             return true;
-        } else if (product.compareTo(this.value) <= 0) {
+        } else if (element.compareTo(this.value) <= 0) {
             // Value could be in left subtree
             if (left == null) {
                 // No left child
                 return false;
             } else {
                 // Delegate to left child
-                return left.contains(product);
+                return left.contains(element);
             }
         } else {
             // Value could be in the right subtree
@@ -83,26 +81,26 @@ public class ProductNode {
             } else {
 
                 // Delegate to right child
-                return right.contains(product);
+                return right.contains(element);
             }
         }
     }
 
-    public ProductNode remove(Product product) {
+    public Node remove(T element) {
         // check the subtrees
-        if (product.compareTo(this.value) < 0) {
+        if (element.compareTo(this.value) < 0) {
             // Check if value is in left subtree
             if (left != null) {
                 // Recursively run remove until this this conditional is
                 // No longer satisfied
-                left = left.remove(product);
+                left = left.remove(element);
             }
-        } else if (product.compareTo(this.value) > 0) {
+        } else if (element.compareTo(this.value) > 0) {
             // Check if value is in right subtree
             if (right != null) {
                 // Recursively run remove until this this conditional is
                 // No longer satisfied
-                right = right.remove(product);
+                right = right.remove(element);
             }
         } else {
             // Conditional when the node is found
@@ -123,7 +121,7 @@ public class ProductNode {
                 //  (1) Identify a new value, then (2) remove the duplicate
                 if (r.nextBoolean()) {
                     // get maximum value from left
-                    value = left.rightMost();
+                    value = (T) left.rightMost();
                     // remove duplicate from the left
                     left = left.remove(value);
                 } else {
@@ -139,26 +137,26 @@ public class ProductNode {
         return this;
     }
 
-    private Product leftMost() {
+
+    private T leftMost() {
         // returns the left most value
         if (left == null) {
             // no more left children
             return value;
         } else {
-            return left.leftMost();
+            return (T) left.leftMost();
         }
     }
 
-    private Product rightMost() {
+    private T rightMost() {
         // returns the right most value
         if (right == null) {
             // no more right children
             return value;
         } else {
-            return right.rightMost();
+            return  (T)right.rightMost();
         }
     }
-
 
     //Traversals
 

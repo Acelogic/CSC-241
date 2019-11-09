@@ -1,6 +1,6 @@
 package csc241hw04;
 
-public abstract class Product implements Comparable {
+public abstract class Product implements Comparable  {
 
     private String productName;
     private String ISBN;

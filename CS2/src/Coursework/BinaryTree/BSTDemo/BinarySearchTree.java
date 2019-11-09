@@ -41,24 +41,24 @@ public class BinarySearchTree {
         // POST ORDER
         // L-R-V
 
-//    // Check if a value is contained in the tree
-//    public boolean contains(int v) {
-//        // check for an empty tree
-//        if (root == null) {
-//            // empty
-//            return false;
-//        } else {
-//            return root.contains(v);
-//        }
-//    }
-//
-//    // Remove a value from the tree
-//    public void remove(int v) {
-//        if (root != null) {
-//            root = root.remove(v);
-//        }
-//    }
+    // Check if a value is contained in the tree
+    public boolean contains(int v) {
+        // check for an empty tree
+        if (root == null) {
+            // empty
+            return false;
+        } else {
+            return root.contains(v);
+        }
+    }
 
-  
+    // Remove a value from the tree
+    public void remove(int v) {
+        if (root != null) {
+            root = root.remove(v);
+        }
+    }
+
+
 
 }
