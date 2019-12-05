@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<products>
+    <product taxable="false" productName="Milk" isbn="234567" unitPrice="2.00" quantity="2"/>
+    <product taxable="true" productName="Headphones" isbn="123456" unitPrice="10.00" quantity="1"/>
+    <product taxable="true" productName="Snickers" isbn="345678" unitPrice="1.00" quantity="1"/>
+    <product taxable="true" productName="A" isbn="345678" unitPrice="1.00" quantity="1"/>
+    <product taxable="true" productName="C" isbn="345678" unitPrice="1.00" quantity="1"/>
+    <product taxable="true" productName="B" isbn="345678" unitPrice="1.00" quantity="1"/>
+
+</products>

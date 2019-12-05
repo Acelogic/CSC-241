@@ -177,7 +177,7 @@ public class Main {
         System.out.println("Left-Right-Visit");
         System.out.println(t1.postOrder());
 
-        // Remove a product
+        // Remove a productp
         System.out.println("---=== After Remove ===---");
         t1.remove(p1);
         System.out.print(p1 + " is ");
