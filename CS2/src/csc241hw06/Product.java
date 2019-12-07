@@ -1,5 +1,7 @@
 package csc241hw06;
 
+import java.util.Objects;
+
 public abstract class Product implements Comparable<Product> {
 
     private String productName;
@@ -47,5 +49,22 @@ public abstract class Product implements Comparable<Product> {
         return (this.productName.compareTo(other.productName) != 0) ?
                 (this.productName.compareTo(other.productName)) :
                 (this.productName.compareTo(other.getProductName()));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Product other = (Product) o;
+        return this.productName.equals(other.productName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productName);
     }
 }

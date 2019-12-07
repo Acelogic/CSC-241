@@ -60,6 +60,7 @@ public class Main {
             System.out.println("Sorted product names: ");
             handler.getProducts().stream()
                     .sorted()
+                    .distinct()
                     .forEach(product -> System.out.println(product.getProductName()));
 
             System.out.println("Total Price: " + handler.getProducts().stream()
